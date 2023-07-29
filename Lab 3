@@ -1,0 +1,146 @@
+Exercise 3-1
+
+public class Test 
+{
+    //data
+    private String name;
+    private int age;
+    private float salary;
+    
+    //methods
+    public void setName(String n)
+    {
+        name=n;
+    }
+    public String getName()
+    {
+        return name;
+    }
+    public void setAge(int a)
+    {
+        age=a;
+    }
+    public int getAge()
+    {
+        return age;
+    }
+    public void setSalary(float s)
+    {
+        salary=s;
+    }
+    public float getSalary()
+    {
+        return salary;
+    }
+}
+
+public class EncapTest 
+{
+    public static void main(String[] args) 
+    {
+        Test t1=new Test();
+        t1.setName("Thasara Hiruni");
+        t1.setAge(22);
+        t1.setSalary(125000.00f);
+        System.out.println("Name: "+t1.getName());
+        System.out.println("Age: "+t1.getAge());
+        System.out.println("Salary: "+t1.getSalary());
+    }
+}
+Now modify the same code by trying to replace the setters using a constructor. 
+public class Test 
+{
+    //data
+    private String name;
+    private int age;
+    private float salary;
+    
+    //methods
+    public void setDetails(String n,int a,float s)
+    {
+        name=n;
+        age=a;
+        salary=s;
+    }
+    public String getName()
+    {
+        return name;
+    }
+    public int getAge()
+    {
+        return age;
+    }
+    public float getSalary()
+    {
+        return salary;
+    }
+}
+
+public class EncapTest 
+{
+    public static void main(String[] args) 
+    {
+       
+        Test t1=new Test();
+        t1.setDetails("Thasara Hiruni", 22, 125000.00f);
+        System.out.println("Name: "+t1.getName());
+        System.out.println("Age: "+t1.getAge());
+        System.out.println("Salary: "+t1.getSalary());
+    }
+}
+
+Exercise 3-2
+
+public class Test 
+{
+    //data
+    private String empName;
+    private float bsalary;
+    private float bonus;
+    //methods
+    public void setempName(String n)
+    {
+        empName=n;
+    }
+    public String getName()
+    {
+        return empName;
+    }
+    public void setBsalary(float s)
+    {
+        bsalary=s;
+    }
+    public float getSalary()
+    {
+        return bsalary;
+    }
+    public Test(float b)
+    {
+        this.bonus=b;
+    }
+    public float getBonus()
+    {
+        return bonus;
+    }
+    public float bAmount()
+    {
+        float bonusAmount=bsalary+bonus;
+        System.out.println("Bonus Amount: "+bonusAmount);
+        return bonusAmount;
+    }
+}
+
+public class EncapTest 
+{
+    public static void main(String[] args) 
+    {
+        Test t1=new Test(10000.00f);
+        t1.setempName("Bogdan");
+        t1.setBsalary(50000.00f);
+        System.out.println("Employee Name: "+t1.getName());
+        System.out.println("Basic Salary: "+t1.getSalary());
+        System.out.println("Bonus:"+t1.getBonus());
+        t1.bAmount();
+    }
+}
+
