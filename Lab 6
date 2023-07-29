@@ -1,0 +1,42 @@
+Exercise 01:
+
+01)
+public interface MyFirstInterface {
+    int x = 10;
+
+    void display();
+}
+* There is no difference between declare the variable(x) with or without public static final keywords.Because in java interfaces,all variables are public,static and final.
+
+02)
+public interface MyFirstInterface {
+    void display();
+}
+public interface MyFirstInterface {
+    abstract void display();
+}
+* There is no difference between the abstract method with or without abstract keyword.Because in an interface, all methods are abstract.
+
+03)
+public class InterfaceImplemented implements MyFirstInterface {
+
+    @Override
+    public void display() {
+        x = 20; // Trying to change the value of x
+        System.out.println("Value of x inside the implemented method: " + x);
+    }
+}
+*  Once a value is assigned to x, it cannot be modified in the implementing class. 
+correct code:
+public class InterfaceImplemented implements MyFirstInterface {
+    private int customX = 20;
+
+    @Override
+    public void display() {
+        System.out.println("Value of customX inside the implemented method: " + customX);
+    }
+}
+
+
+
+
