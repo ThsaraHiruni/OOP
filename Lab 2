@@ -1,0 +1,114 @@
+PART 01
+01)
+public class Item 
+{
+    //data
+    private int location;
+    private String description;
+}
+
+02)
+public class Item 
+{
+    //data
+    private int location;
+    private String description;
+    
+    //methods
+    public Item(int location,String description)
+    {
+        
+    }
+}
+
+03)
+public class Item 
+{
+    //data
+    private int location;
+    private String description;
+    
+    //methods
+    public Item(int location,String description)
+    {
+        this.location=location;
+        this.description=description;
+    }
+}
+
+04)
+public class Item 
+{
+    //data
+    private int location;
+    private String description;
+    
+    //methods
+    public void setLocation(int l)
+    {
+        location=l;
+    }
+    public int getlocation()
+    {
+        return location;
+    }
+    public void setDescription(String d)
+    {
+        description=d;
+    }
+    public String getDescription()
+    {
+        return description;
+    }
+}
+05)
+public class Monster extends Item 
+{
+    
+}
+06)
+public class Monster extends Item 
+{
+    //data
+    private int i;
+    private String s;
+    
+    //methods
+    public Monster(int i,String s)
+    {
+        this.i=i;
+        this.s=s;
+    }
+}
+07)
+public class ItemObj 
+{
+    public static void main(String[] args) 
+    {
+        Monster m1=new Monster(5,"Colombo");
+        Item i1=new Item(10,"Matara");
+        System.out.println("The location is "+i1.getlocation()+" The description is "+i1.getDescription());
+        System.out.println("The location is "+m1.getlocation()+" The description is "+m1.getDescription());
+    }
+}
+
+PART 02
+01)Answer b
+03)Answer b
+04)Answer b
+05)Answer c
+06)Answer c
+07)Answer d
+
+PART 03
+01)attributes,behaviors
+02)attributes
+03)methods
+04)encapsulation
+05)class
+06)super class
+07)interface
+08)package
+09)Appliation Programming Interface
+
+
