@@ -1,0 +1,111 @@
+Exercise 01:
+
+public class Person 
+{
+    //data
+    private int id;
+    private String name;
+    
+    //setter methods
+    public void setId(int id)
+    {
+        this.id=id;
+    }
+    public void setName(String n)
+    {
+        name=n;
+    }
+    //getter methods
+    public int getId()
+    {
+        return id;
+    }
+    public String getName()
+    {
+        return name;
+    }
+}
+
+public class Students extends Person 
+{
+    //data
+    private String course;
+    
+    //setter methods
+    public void setCourse(String c)
+    {
+        course=c;
+    }
+    //getter methods
+    public String getCourse()
+    {
+        return course;
+    }
+}
+
+
+public class Lecturer extends Person 
+{
+    //data
+    private String programme;
+    
+    //setter methods
+    public void setProgramme(String p)
+    {
+        programme=p;
+    }
+    //getter methods
+    public String getProgramme()
+    {
+        return programme;
+    }
+}
+
+
+public class Test 
+{
+    public static void main(String[] args) 
+    {
+        Students s1=new Students();
+        s1.setId(29285);
+        s1.setName("Thasara Hiruni");
+        s1.setCourse("Java");
+        System.out.println("Student ID: "+s1.getId());
+        System.out.println("Student Name: "+s1.getName());
+        System.out.println("Student Course: "+s1.getCourse());
+        
+        Lecturer L1=new Lecturer();
+        L1.setId(123);
+        L1.setName("Mohomed Shafraz");
+        L1.setProgramme("Programming with Java");
+        System.out.println("Lecturer ID: "+L1.getId());
+        System.out.println("Lecturer Name: "+L1.getName());
+        System.out.println("Lecturer Programme: "+L1.getProgramme());
+    }
+}
+
+Exercise 02:
+
+public class Animal {}
+
+public class Mammal extends Animal {}
+
+public class Reptile extends Animal {}
+
+public class Dog extends Mammal {
+
+    public static void main(String args[]) {
+        Animal a = new Animal();
+        Mammal m = new Dog();
+        System.out.println(m instanceof Animal);
+        System.out.println(m instanceof Dog);
+        System.out.println(m instanceof Mammal);
+        System.out.println(a instanceof Dog);
+    }
+}
+
+Output:
+true
+true
+true
+false
