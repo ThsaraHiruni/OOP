@@ -1,0 +1,142 @@
+Exercise 01:
+
+public class Employee 
+{
+    //data
+    private int empID;
+    private String empName;
+    private String empDesignation;
+    
+    //setter method to empID
+    public void setId(int id)
+    {
+        empID=id;
+    }
+    //getter method to empID
+    public int getId()
+    {
+        return empID;
+    }
+    //setter method to empName
+    public void setName(String name)
+    {
+        empName=name;
+    }
+    //getter method to empName
+    public String getName()
+    {
+        return empName;
+    }
+    //setter method to empDesignation
+    public void setDesignation(String d)
+    {
+        empDesignation=d;
+    }
+    //getter method to empDesignation
+    public String getDesignation()
+    {
+        return empDesignation;
+    }
+}
+
+Exercise 02:
+
+Output:
+9
+6
+
+Exercise 03
+
+public class Person 
+{
+    //data
+    private int id;
+    private String name;
+    
+    //setter methods
+    public void setId(int id)
+    {
+        this.id=id;
+    }
+    public void setName(String n)
+    {
+        name=n;
+    }
+    //getter methods
+    public int getId()
+    {
+        return id;
+    }
+    public String getName()
+    {
+        return name;
+    }
+}
+
+public class Students extends Person 
+{
+    //data
+    private String course;
+    
+    //setter methods
+    public void setCourse(String c)
+    {
+        course=c;
+    }
+    //getter methods
+    public String getCourse()
+    {
+        return course;
+    }
+}
+
+
+public class Lecturer extends Person 
+{
+    //data
+    private String programme;
+    
+    //setter methods
+    public void setProgramme(String p)
+    {
+        programme=p;
+    }
+    //getter methods
+    public String getProgramme()
+    {
+        return programme;
+    }
+}
+
+
+public class Test 
+{
+    public static void main(String[] args) 
+    {
+        Students s1=new Students();
+        s1.setId(29285);
+        s1.setName("Thasara Hiruni");
+        s1.setCourse("Java");
+        System.out.println("Student ID: "+s1.getId());
+        System.out.println("Student Name: "+s1.getName());
+        System.out.println("Student Course: "+s1.getCourse());
+        
+        Lecturer L1=new Lecturer();
+        L1.setId(123);
+        L1.setName("Mohomed Shafraz");
+        L1.setProgramme("Programming with Java");
+        System.out.println("Lecturer ID: "+L1.getId());
+        System.out.println("Lecturer Name: "+L1.getName());
+        System.out.println("Lecturer Programme: "+L1.getProgramme());
+    }
+}
+
+Exercise 04
+
+Output:
+true
+true
+true
+
+
+
